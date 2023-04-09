@@ -1,34 +1,46 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+import { useEffect, useRef, useState } from 'react'
+import Typed from 'typed.js'
 import './App.css'
+import NavBar from './components/NavBar'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    <div>
+      <NavBar />
+      <h1>Hello</h1>
     </div>
   )
 }
 
 export default App
+
+
+
+
+// const el = useRef(null)
+
+// const [text, setText] = useState('')
+
+// useEffect(() => {
+//   const typed = new Typed(el.current, {
+//     strings: ['One', 'Two', 'Three'],
+//     typeSpeed: 150
+//   })
+
+//   return () => {
+//     typed.destroy()
+//   }
+
+// }, [])
+
+// return (
+//   <div>
+//     <h1>
+//       Hello world
+//     </h1>
+//     <div>
+//       <span ref={el} />
+//       <h2>{text}</h2>
+//     </div>
+//   </div>
+// )
