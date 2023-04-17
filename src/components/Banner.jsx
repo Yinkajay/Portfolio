@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { Col, Container, Row } from "react-bootstrap"
 import { ArrowRightCircle } from "react-bootstrap-icons"
+import TrackVisibility from "react-on-screen"
 // import headerimage
 
 const Banner = () => {
@@ -26,14 +27,14 @@ const Banner = () => {
         let updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1)
 
         setText(updatedText)
-        if(isDeleting){
-            setLetterSpeed(prevSpeed => prevSpeed/2)
+        if (isDeleting) {
+            setLetterSpeed(prevSpeed => prevSpeed / 2)
         }
 
-        if(!isDeleting && updatedText ===fullText){
+        if (!isDeleting && updatedText === fullText) {
             setIsDeleting(true)
             setLetterSpeed(period)
-        }else if(isDeleting && updatedText ==''){
+        } else if (isDeleting && updatedText == '') {
             setIsDeleting(false)
             setLoopIndex(loopIndex + 1)
             setLetterSpeed(500)
@@ -46,11 +47,17 @@ const Banner = () => {
             <Container>
                 <Row className="align-items-center">
                     <Col xs={12} md={6} xl={7}>
-                        <span className="tagline">Welcome to my Portfolio</span>
-                        <h1>Hello I'm Yinka, <span className="wrap">{text}</span>
-                        </h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum facilis officia corporis, quas veritatis asperiores rem magni officiis quo possimus corrupti totam quae! Sunt, hic totam mollitia dolorem repellat necessitatibus!</p>
-                        <button onClick={() => console.log('clicked')}>Let's connect <ArrowRightCircle /></button>
+                        <TrackVisibility>
+                            {({ isVisible }) =>
+                                <div className={isVisible ? "animated__animated animate__fadeIn" : ''}>
+                                    <span className="tagline">Welcome to my Portfolio</span>
+                                    <h1>Hello I'm Yinka, <span className="wrap">{text}</span>
+                                    </h1>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum facilis officia corporis, quas veritatis asperiores rem magni officiis quo possimus corrupti totam quae! Sunt, hic totam mollitia dolorem repellat necessitatibus!</p>
+                                    <button onClick={() => console.log('clicked')}>Let's connect <ArrowRightCircle /></button>
+                                </div>
+                            }
+                        </TrackVisibility>
                     </Col>
                     <Col xs={12} md={6} xl={5}>
                         <img src="" alt="banner image" />
