@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { Col, Container, Row } from "react-bootstrap"
+import ContactImg from '../assets/images/contact.svg'
 
 const Contact = () => {
     const initFormDetails = {
@@ -41,7 +42,7 @@ const Contact = () => {
                 <Container>
                     <Row>
                         <Col md={6}>
-                            <img src="" alt="contact-image" />
+                            <img src={ContactImg} alt="contact-image" />
                         </Col>
                         <Col md={6}>
                             <h2>Contact Me!</h2>

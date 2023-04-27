@@ -6,6 +6,8 @@ import Vue from '../assets//images/vue.svg'
 import Node from '../assets//images/nodejs.svg'
 import ReactNative from '../assets//images/react-native.svg'
 import Git from '../assets/images/git.svg'
+import Mongo from '../assets/images/Mongo.svg'
+import Frontend from '../assets/images/Frontend.svg'
 
 import Carousel from "react-multi-carousel";
 import 'react-multi-carousel/lib/styles.css'
@@ -40,9 +42,9 @@ const Skills = (props) => {
         <Row>
           <Col>
             <div className="skill-bx">
-              <h2>Skills</h2>
+              <h2>Skills & Tools</h2>
               <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam suscipit accusantium corporis consequuntur, dolorem aliquam saepe nam unde itaque rerum eveniet, aut quo soluta molestias, odio repudiandae aliquid? Quibusdam, perferendis!
+              I've used a variety of tools and programs over time to polish my talents. The tools described below are only a few examples of them.
               </p>
               <Carousel responsive={responsive} infinite={true} className="skill-slider">
                 <div className="item">
@@ -50,7 +52,11 @@ const Skills = (props) => {
                   <h5>Javascript</h5>
                 </div>
                 <div className="item">
-                  <img src={React} alt="skill 1" />
+                  <img src={Frontend} alt="skill 1" />
+                  <h5>Frontend Development</h5>
+                </div>
+                <div className="item">
+                  <img src={React} alt="skill" />
                   <h5>React</h5>
                 </div>
                 <div className="item">
@@ -58,16 +64,20 @@ const Skills = (props) => {
                   <h5>Vue</h5>
                 </div>
                 <div className="item">
-                  <img src={Node} alt="skill 1" />
+                  <img src={Node} alt="skill" />
                   <h5>Node</h5>
                 </div>
                 <div className="item">
-                  <img src={ReactNative} alt="skill 1" />
+                  <img src={ReactNative} alt="skill" />
                   <h5>React-Native</h5>
                 </div>
                 <div className="item">
-                  <img src={Git} alt="skill 1" />
+                  <img src={Git} alt="skill" />
                   <h5>Git</h5>
+                </div>
+                <div className="item">
+                  <img src={Mongo} alt="skill" />
+                  <h5>Mongo DB</h5>
                 </div>
               </Carousel>
             </div>

@@ -1,5 +1,6 @@
 import { Col, Container, Row } from "react-bootstrap"
 // import logo or image
+import Memoji from '../assets/images/Memoji.svg'
 // import navicon1
 import LinkedIn from '../assets//images/NavLinkedIn.svg'
 // import navicon2
@@ -11,7 +12,7 @@ const Footer = () => {
             <Container>
                 <Row className="align-item-center">
                     <Col sm={6}>
-                        <img src="" alt="logo" />
+                        <img src={Memoji} alt="logo" />
                     </Col>
                     <Col sm={6} className="text-center text-sm-end">
                         <div className="social-icon">

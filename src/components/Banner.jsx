@@ -2,16 +2,17 @@ import { useEffect, useState } from "react"
 import { Col, Container, Row } from "react-bootstrap"
 import { ArrowRightCircle } from "react-bootstrap-icons"
 import TrackVisibility from "react-on-screen"
-// import headerimage
+// import Banner Image
+import BannerImage from '../assets/images/BannerImage.webp'
 
 const Banner = () => {
     const [loopIndex, setLoopIndex] = useState(0)
     const [isDeleting, setIsDeleting] = useState(false)
     const [text, setText] = useState('')
-    const [letterSpeed, setLetterSpeed] = useState(300 - Math.random() * 100)
-    const period = 2000
+    const [letterSpeed, setLetterSpeed] = useState(100 - Math.random() * 100)
+    const period = 1000
 
-    const toRotate = ['Web Developer', 'App developer']
+    const toRotate = ['Frontend developer', 'Software Engineer' , 'App developer']
 
     useEffect(() => {
         let ticker = setInterval(() => {
@@ -50,17 +51,16 @@ const Banner = () => {
                         <TrackVisibility>
                             {({ isVisible }) =>
                                 <div className={isVisible ? "animated__animated animate__fadeIn" : ''}>
-                                    <span className="tagline">Welcome to my Portfolio</span>
-                                    <h1>Hello I'm Yinka, <span className="wrap">{text}</span>
+                                    <span className="tagline">Welcome.</span>
+                                    <h1>Hello I'm Yinka, a <span className="wrap">{text}</span>
                                     </h1>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum facilis officia corporis, quas veritatis asperiores rem magni officiis quo possimus corrupti totam quae! Sunt, hic totam mollitia dolorem repellat necessitatibus!</p>
-                                    <button onClick={() => console.log('clicked')}>Let's connect <ArrowRightCircle /></button>
+                                    <p>I'm a front-end web developer with a strong background in HTML, CSS, and JavaScript. I'm passionate about building engaging and aesthetically pleasing websites. I've also experimented with a number of frameworks, including JQuery, React, and Vue to name a few, and I'm always honing my abilities to remain on top of the most recent developments in web development.</p>
                                 </div>
                             }
                         </TrackVisibility>
                     </Col>
                     <Col xs={12} md={6} xl={5}>
-                        <img src="" alt="banner image" />
+                        <img src={BannerImage} alt="banner image" />
                     </Col>
                 </Row>
             </Container>

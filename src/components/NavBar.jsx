@@ -33,7 +33,7 @@ const NavBar = () => {
     <Navbar expand="lg" className={hasScrolled ? 'scrolled' : ''}>
       <Container>
         <Navbar.Brand href="#home">
-          <img style={{ width: '50px' }} src={memoji} alt="logo" />
+          <img style={{ width: '80px' }} src={memoji} alt="logo" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav">
           <span className="navbar-toggler-icon"></span>
